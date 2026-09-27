@@ -36,7 +36,7 @@ strong{color:#1f3763}
 </header>
 
 <h2>AI ENGINEERING PROFILE</h2>
-<p class="tagline"><strong>22+ years</strong> of software engineering and architecture experience, with a current focus on building an <strong>AI-first software development approach</strong>. Designing agent orchestration workflows that move software from idea and specifications through testing strategy, implementation, validation, deployment and monitoring—while enabling each engineer to run a fleet of agents concurrently.</p>
+<p class="tagline"><strong><span id="experience-years"></span>+ years</strong> of software engineering and architecture experience, with a current focus on building an <strong>AI-first software development approach</strong>. Designing agent orchestration workflows that move software from idea and specifications through testing strategy, implementation, validation, deployment and monitoring—while enabling each engineer to run a fleet of agents concurrently.</p>
 
 <h2>PROFESSIONAL EXPERIENCE</h2>
 <h3>Senior Cloud Engineer — Quest Software, Halifax, NS</h3>
@@ -111,6 +111,13 @@ strong{color:#1f3763}
 <p>Microsoft Certified Professional (2004) · OutSystems Associate Developer (2015)</p>
 </section>
 </div>
+<script>
+(function () {
+  const startYear = 2004;
+  const years = new Date().getFullYear() - startYear;
+  document.getElementById("experience-years").textContent = years;
+})();
+</script>
 </main>
 </body>
 </html>
