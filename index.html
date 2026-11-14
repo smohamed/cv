@@ -1,123 +1,224 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-CA">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ElSayed ElAshmawy — AI Engineer / Software Architect</title>
+<meta name="description" content="ElSayed ElAshmawy: AI Engineer / Software Architect. Agentic AI · AI Coding Assistants · Autonomous Agent Orchestration. 22+ years of software engineering and architecture experience, building AI-first software development with multi-agent orchestration.">
+<meta name="author" content="ElSayed ElAshmawy">
+<meta name="color-scheme" content="light dark">
 <style>
-@page{size:A4;margin:10mm}
-*{box-sizing:border-box}body{margin:0;background:#fff;color:#263238;font-family:"Century Gothic",Arial,sans-serif;font-size:10.2px;line-height:1.34}
-main{max-width:900px;margin:0 auto;padding:18px 24px}
-header{border-bottom:2px solid #bca97e;padding-bottom:9px;margin-bottom:10px}
-h1{margin:0;color:#bca97e;font-size:29px;letter-spacing:.2px}
-.subtitle{font-size:15px;font-weight:700;color:#1f3763;margin-top:2px}
-.contact{font-size:9.5px;margin-top:5px;color:#4b5559}
-h2{font-size:13px;color:#bca97e;border-bottom:1px solid #d5d6d6;padding-bottom:3px;margin:11px 0 5px}
-h3{font-size:11.5px;margin:6px 0 1px;color:#263238}
-.meta{font-size:9.3px;color:#59656b;margin-bottom:3px}
-p{margin:0 0 4px}
-ul{margin:2px 0 4px 16px;padding:0}
-li{margin:0 0 2px}
-.columns{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.tagline{font-size:10.5px}
-.skills{columns:2;column-gap:20px;margin:0;padding-left:16px}
-.skills li{break-inside:avoid}
-.earlier{font-size:9.6px}
-strong{color:#1f3763}
-@media print{main{padding:0}.columns{gap:14px}a{color:inherit;text-decoration:none}}
+  :root {
+    --ink: #17202b;
+    --muted: #5b6676;
+    --accent: #1d4f91;
+    --rule: #d8dee7;
+    --bg: #ffffff;
+    --page: #f3f5f8;
+    --link: #1d4f91;
+    --font: Inter, "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e7ebf1;
+      --muted: #9aa6b6;
+      --accent: #7fb0f0;
+      --rule: #2d3644;
+      --bg: #151a22;
+      --page: #0e1218;
+      --link: #8dbbf5;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font: 400 15.5px/1.55 var(--font);
+    -webkit-font-smoothing: antialiased;
+  }
+  .sheet {
+    max-width: 860px;
+    margin: 32px auto;
+    padding: 48px 56px 52px;
+    background: var(--bg);
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 28px rgba(0,0,0,.07);
+  }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover, a:focus-visible { border-bottom-color: currentColor; }
+
+  header h1 { margin: 0; font-size: 2.15rem; line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; }
+  .headline { margin: .35rem 0 0; font-size: 1.15rem; font-weight: 600; color: var(--accent); }
+  .tagline { margin: .15rem 0 0; color: var(--muted); font-size: .95rem; }
+  .contact { margin: .9rem 0 0; font-size: .92rem; color: var(--muted); }
+  .contact p { margin: 0 0 .15rem; }
+  .contact .dot { margin: 0 .55rem; }
+  .contact a[href^="tel:"] { white-space: nowrap; }
+
+  section { margin-top: 1.9rem; }
+  h2 {
+    margin: 0 0 .8rem;
+    padding-bottom: .35rem;
+    border-bottom: 1.5px solid var(--rule);
+    font-size: .78rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .summary { margin: 0; }
+  strong { font-weight: 650; }
+
+  .role + .role { margin-top: 1.3rem; }
+  .role-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: .35rem; }
+  h3 { margin: 0; font-size: 1rem; font-weight: 400; line-height: 1.4; }
+  .role-title { font-weight: 700; }
+  h3 .sep { color: var(--muted); }
+  .dates { margin: 0; white-space: nowrap; color: var(--muted); font-size: .9rem; font-variant-numeric: tabular-nums; }
+  h3 { flex: 1; }
+  ul { margin: 0; padding: 0; list-style: none; }
+  .role li { position: relative; padding-left: 1.15rem; margin: .32rem 0; }
+  .role li::before { content: ""; position: absolute; left: .2rem; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+  h2 { break-after: avoid; }
+  .keep { break-inside: avoid; }
+
+  dl.skills { margin: 0; display: grid; grid-template-columns: 11.5rem 1fr; gap: .55rem 1rem; }
+  dl.skills dt { font-weight: 700; }
+  dl.skills dd { margin: 0; }
+
+  .edu, .certs { margin: 0 0 .3rem; }
+  .certs { color: var(--muted); }
+
+  @media (max-width: 720px) {
+    .sheet { margin: 0; padding: 28px 20px 36px; border-radius: 0; box-shadow: none; }
+    header h1 { font-size: 1.8rem; }
+    .contact p { display: flex; flex-direction: column; gap: .15rem; margin: 0; }
+    .contact p + p { margin-top: .15rem; }
+    .contact .dot { display: none; }
+    .role-head { flex-direction: column; gap: .1rem; }
+    dl.skills { grid-template-columns: 1fr; gap: .1rem; }
+    dl.skills dd { margin-bottom: .7rem; }
+  }
+
+  @page { size: Letter; margin: 0.4in 0.5in; }
+  @media print {
+    :root {
+      --ink: #111; --muted: #4a5361; --accent: #1d4f91; --rule: #c9d0da;
+      --bg: #fff; --page: #fff; --link: #1d4f91;
+      /* Static (non-variable) font so the PDF embeds real TrueType glyphs and extracts cleanly in every parser */
+      --font: Carlito, Calibri, "Segoe UI", Arial, sans-serif;
+    }
+    body { font-size: 10pt; line-height: 1.3; background: #fff; }
+    .sheet { max-width: none; margin: 0; padding: 0; box-shadow: none; border-radius: 0; }
+    header h1 { font-size: 23pt; letter-spacing: -0.01em; line-height: 1.1; }
+    .headline { font-size: 12pt; margin-top: 2pt; }
+    .tagline { font-size: 9.8pt; margin-top: 0; }
+    .contact { font-size: 9.6pt; margin-top: 5pt; }
+    .contact p { margin: 0; }
+    section { margin-top: 9pt; }
+    h2 { font-size: 8.6pt; margin-bottom: 4pt; padding-bottom: 2pt; }
+    h3 { font-size: 10.4pt; line-height: 1.3; }
+    .dates { font-size: 9.4pt; }
+    .role-head { margin-bottom: 1pt; }
+    .role { break-inside: avoid; }
+    .role + .role { margin-top: 6pt; }
+    .role li { margin: 1.4pt 0; padding-left: 11pt; }
+    .role li::before { left: 1pt; width: 4px; height: 4px; top: .56em; }
+    .edu, .certs { margin: 0 0 1pt; }
+    dl.skills { grid-template-columns: 1.7in 1fr; gap: 2pt 8pt; }
+    a { color: inherit; border: 0; }
+  }
 </style>
 </head>
 <body>
-<main>
-<header>
-<h1>ElSayed ElAshmawy</h1>
-<div class="subtitle">AI Engineer / Software Architect · Agentic AI · AI Coding Assistants · Autonomous Agent Orchestration</div>
-<div class="contact">Fredericton, NB, Canada · 1-506-461-9649 · elsayed@elashmawy.family · <a href="https://link.elashmawy.family/elsayed/linkedin">LinkedIn</a></div>
-</header>
+<div class="sheet">
+  <header>
+    <h1>ElSayed ElAshmawy</h1>
+    <p class="headline">AI Engineer / Software Architect</p>
+    <p class="tagline">Agentic AI · AI Coding Assistants · Autonomous Agent Orchestration</p>
+    <div class="contact">
+      <p><span>Fredericton, NB, Canada</span><span class="dot" aria-hidden="true">·</span><span><a href="tel:+15064619649">+1 506-461-9649</a></span><span class="dot" aria-hidden="true">·</span><span><a href="mailto:elsayed@elashmawy.family">elsayed@elashmawy.family</a></span></p>
+      <p><span>LinkedIn: <a href="https://link.elashmawy.family/elsayed/linkedin">link.elashmawy.family/elsayed/linkedin</a></span><span class="dot" aria-hidden="true">·</span><span>Website: <a href="https://cv.elsayed.elashmawy.family">cv.elsayed.elashmawy.family</a></span></p>
+    </div>
+  </header>
 
-<h2>AI ENGINEERING PROFILE</h2>
-<p class="tagline"><strong><span id="experience-years"></span>+ years</strong> of software engineering and architecture experience, with a current focus on building an <strong>AI-first software development approach</strong>. Designing agent orchestration workflows that move software from idea and specifications through testing strategy, implementation, validation, deployment and monitoring—while enabling each engineer to run a fleet of agents concurrently.</p>
+  <main>
+    <section aria-labelledby="h-profile">
+      <h2 id="h-profile">AI Engineering Profile</h2>
+      <p class="summary">AI engineer and software architect with <strong>22+ years</strong> of experience across enterprise, public-sector and SaaS platforms, now building an <strong>AI-first approach to software development</strong>. Designs multi-agent workflows that carry software from specification to deployment and monitoring, so each engineer can run a <strong>fleet of agents</strong> concurrently with humans in the loop.</p>
+    </section>
 
-<h2>PROFESSIONAL EXPERIENCE</h2>
-<h3>Senior Cloud Engineer — Quest Software, Halifax, NS</h3>
-<div class="meta">2020–Present</div>
-<ul>
-<li>Building <strong>AI-agent orchestration workflows</strong> for autonomous, AI-first software development across the full lifecycle: idea discovery, specifications, architecture/planning, testing strategy, implementation, validation, deployment and monitoring.</li>
-<li>Designing a <strong>fleet-of-agents model</strong> that lets each engineer run multiple specialized agents concurrently, enabling parallel progress on multiple features, defects, tests and engineering initiatives.</li>
-<li>Orchestrating specialized agents for requirements analysis, technical design, implementation, test generation, validation, code review, remediation, deployment and operational monitoring.</li>
-<li>Creating iterative <strong>execution → validation → remediation</strong> loops so agent-produced work can be tested, reviewed and refined before moving to the next delivery stage.</li>
-<li>Applying the workflow to reduce engineering cost and cycle time, increase development throughput and quality, and <strong>unlock capacity for additional growth opportunities</strong> without scaling engineering effort linearly.</li>
-<li>Using dedicated agent workstreams to <strong>identify, prioritize and tackle technical debt</strong> in parallel, reducing the need to pull engineers away from highly requested customer features and protecting valuable development capacity.</li>
-<li>Applying cloud-native orchestration patterns using <strong>C#/.NET, Python, microservices, distributed asynchronous processing, Kubernetes, Dapr, Docker, Azure, CI/CD and Infrastructure as Code</strong>.</li>
-<li>Working on the OnDemand Recovery SaaS Platform, resolving infrastructure vulnerabilities and deployment issues while improving performance, reliability and operational workflows.</li>
-</ul>
+    <section aria-labelledby="h-exp">
+      <h2 id="h-exp">Professional Experience</h2>
+      <article class="role">
+        <div class="role-head">
+          <h3><span class="role-title">Senior Cloud Engineer</span> <span class="sep">—</span> Quest Software, Halifax, NS</h3>
+          <p class="dates">2020–Present</p>
+        </div>
+        <ul>
+          <li>Build <strong>AI-agent orchestration workflows</strong> for autonomous, AI-first development across the full lifecycle: idea discovery, specifications, architecture and planning, testing strategy, implementation, validation, deployment and monitoring.</li>
+          <li>Design a <strong>fleet-of-agents model</strong>: each engineer runs specialized agents concurrently (requirements, design, implementation, test generation, code review, remediation, deployment, monitoring) for parallel progress on features, defects and initiatives.</li>
+          <li>Create iterative <strong>execution → validation → remediation</strong> loops with human-in-the-loop controls, so agent-produced work is tested, reviewed and refined before it moves to the next delivery stage.</li>
+          <li>Apply the workflow to reduce engineering cost and cycle time, increase throughput and quality, and <strong>free capacity for growth</strong> without scaling engineering effort linearly.</li>
+          <li>Use dedicated agent workstreams to <strong>identify, prioritize and tackle technical debt</strong> in parallel, keeping engineers on high-demand customer features and protecting development capacity.</li>
+          <li>Implement cloud-native orchestration patterns using <strong>C#/.NET, Python, microservices, distributed asynchronous processing, Kubernetes, Dapr, Docker, Azure, CI/CD and Infrastructure as Code</strong>.</li>
+          <li>Work on the <strong>OnDemand Recovery SaaS platform</strong>, remediating infrastructure vulnerabilities and deployment issues while improving performance, reliability and operational workflows.</li>
+        </ul>
+      </article>
+      <article class="role">
+        <div class="role-head">
+          <h3><span class="role-title">Application Architect</span> <span class="sep">—</span> Ajman Municipality, Ajman, UAE</h3>
+          <p class="dates">2014–2020</p>
+        </div>
+        <ul>
+          <li>Designed application architecture strategies and large-scale system deployments aligned with business objectives.</li>
+          <li>Created migration strategies, integration solutions and proofs of concept for evolving platforms.</li>
+          <li>Built scalable systems that balance functionality, performance, reliability and maintainability.</li>
+        </ul>
+      </article>
+      <article class="role">
+        <div class="role-head">
+          <h3><span class="role-title">Application Architect</span> <span class="sep">—</span> Al Ain City Municipality, Abu Dhabi, UAE</h3>
+          <p class="dates">2011–2014</p>
+        </div>
+        <ul>
+          <li>Developed architecture and integration capabilities and rapidly prototyped new data-processing solutions.</li>
+          <li>Mentored development teams and supported architecture, implementation and delivery.</li>
+        </ul>
+      </article>
+      <article class="role">
+        <div class="role-head">
+          <h3><span class="role-title">Software Architect / Software Engineer</span> <span class="sep">—</span> VisaHQ, Cairo, Egypt</h3>
+          <p class="dates">2004–2011</p>
+        </div>
+        <ul>
+          <li>Developed scalable software and integrations across requirements, design and implementation; delivered unit-tested systems.</li>
+        </ul>
+      </article>
+    </section>
 
-<div class="columns">
-<section>
-<h2>EARLIER EXPERIENCE</h2>
-<h3>Application Architect — Ajman Municipality, Ajman, UAE</h3>
-<div class="meta">2014–2020</div>
-<ul class="earlier">
-<li>Designed application architecture strategies and large-scale system deployments aligned with business objectives.</li>
-<li>Created migration strategies, integration solutions and proofs of concept for evolving platforms.</li>
-<li>Built scalable systems emphasizing functionality, performance, reliability and maintainability.</li>
-</ul>
+    <section class="keep" aria-labelledby="h-skills">
+      <h2 id="h-skills">AI &amp; Engineering Skills</h2>
+      <dl class="skills">
+        <dt>AI &amp; Agentic Engineering</dt>
+        <dd>AI-first software development · Multi-agent orchestration · Agent fleets / concurrent execution · Autonomous agent workflows · Task decomposition &amp; planning · Execution / validation / remediation loops · AI-assisted test strategies · Code generation &amp; review workflows · Technical-debt automation · Deployment &amp; monitoring workflows · Human-in-the-loop controls · AI coding assistants &amp; agent harnesses (Copilot, Claude)</dd>
+        <dt>Software Engineering</dt>
+        <dd>C# / .NET · Python · REST APIs · Microservices · Distributed asynchronous systems</dd>
+        <dt>Cloud &amp; DevOps</dt>
+        <dd>Azure / Azure DevOps · Kubernetes · Dapr · Docker · CI/CD · Pulumi / Infrastructure as Code</dd>
+        <dt>Architecture &amp; Quality</dt>
+        <dd>Architecture &amp; API design · Performance optimization · Security / OWASP</dd>
+      </dl>
+    </section>
 
-<h3>Application Architect — Al Ain City Municipality, Abu Dhabi, UAE</h3>
-<div class="meta">2011–2014</div>
-<ul class="earlier">
-<li>Developed architecture and integration capabilities and rapidly prototyped new data-processing solutions.</li>
-<li>Mentored development teams and supported architecture, implementation and delivery.</li>
-</ul>
-
-<h3>Software Architect / Software Engineer — VisaHQ, Cairo, Egypt</h3>
-<div class="meta">2004–2011</div>
-<ul class="earlier">
-<li>Developed robust, scalable software and integrations, delivered unit-tested systems, and worked across requirements, design and implementation.</li>
-</ul>
-</section>
-
-<section>
-<h2>AI & ENGINEERING CAPABILITIES</h2>
-<ul class="skills">
-<li>AI-first software development</li>
-<li>Autonomous agent workflows</li>
-<li>Multi-agent orchestration</li>
-<li>AI agents harness (Copilot, Claude)</li>
-<li>Agent fleets / concurrent execution</li>
-<li>Task decomposition & planning</li>
-<li>Execution / validation / remediation</li>
-<li>AI-assisted test strategies</li>
-<li>Code generation & review workflows</li>
-<li>Technical-debt automation</li>
-<li>Deployment & monitoring workflows</li>
-<li>Human-in-the-loop controls</li>
-<li>C# / .NET</li>
-<li>Python</li>
-<li>REST APIs</li>
-<li>Microservices</li>
-<li>Distributed asynchronous systems</li>
-<li>Kubernetes / Dapr / Docker</li>
-<li>Azure / Azure DevOps</li>
-<li>Pulumi / Infrastructure as Code</li>
-<li>CI/CD</li>
-<li>Architecture & API design</li>
-<li>Security / OWASP</li>
-<li>Performance optimization</li>
-</ul>
-
-<h2>EDUCATION & CERTIFICATIONS</h2>
-<p><strong>B.Sc., Computer and Information Systems</strong> — Cairo University</p>
-<p>Microsoft Certified Professional (2004) · OutSystems Associate Developer (2015)</p>
-</section>
+    <section class="keep" aria-labelledby="h-edu">
+      <h2 id="h-edu">Education &amp; Certifications</h2>
+      <p class="edu"><strong>B.Sc., Computer and Information Systems</strong> — Cairo University, Egypt</p>
+      <p class="certs">Microsoft Certified Professional (2004) · OutSystems Associate Developer (2015)</p>
+    </section>
+  </main>
 </div>
-<script>
-(function () {
-  const startYear = 2004;
-  const years = new Date().getFullYear() - startYear;
-  document.getElementById("experience-years").textContent = years;
-})();
-</script>
-</main>
 </body>
 </html>
